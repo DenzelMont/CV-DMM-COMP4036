@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf8">
+  <title>15 Puzzle con ELM</title>
+
+  <style>
+    :root {
+      --cell-size: 80px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+            background-color: #062d53;
+        }
+
+        h1 {
+            color:white;
+            font-family: "STCaiyun", sans-serif;
+            text-align: center;
+        }
+
+    .board {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 5rem auto 0;
+      border: 1px solid #062d53;
+    }
+
+    .tile {
+      display: inline-flex;
+      width: var(--cell-size);
+      height: var(--cell-size);
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgb(229, 255, 59);
+      border-radius: 15px;
+      background-color: rgba(81, 191, 238, 0.691);
+      font-size: 3em;
+      color: rgb(0, 0, 0);
+      /*El color del font es negro, porque me gusta el azul para las casillas, y si pongo otro para el font no se ve muy bien*/
+      font-family: "STCaiyun", sans-serif;
+      /* Decidí escoger STCaiyun porque me parecio bastante funky para el juego*/
+
+
+    }
+
+    .tile.empty {
+            background-color: #062d53;
+      color: rgb(255, 255, 255);
+      font-family: "STCaiyun", sans-serif;
+      
+
+    }
+
+    @keyframes octocat-wave {
+
+      0%,
+      100% {
+        transform: rotate(0);
+      }
+
+      20%,
+      60% {
+        transform: rotate(-25deg);
+      }
+
+      40%,
+      80% {
+        transform: rotate(10deg);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>15 Puzzle en ELM por Den Montes</h1>
+
+  <div id="root"></div>
+
+  <script src="Fuentes/bundle.js"></script>
+
+  <script>
+    const rootElement = document.getElementById("root");
+    Elm.Main.init({ node: rootElement });
+  </script>
+
+</body>
+
+</html>
